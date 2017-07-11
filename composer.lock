@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7b0fdde1806cd79016602aa22c22aac7",
+    "packages": [
+        {
+            "name": "pear/net_smartirc",
+            "version": "v1.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Net_SmartIRC.git",
+                "reference": "c4d478bf70afa85577867eecec4e46944c05351d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Net_SmartIRC/zipball/c4d478bf70afa85577867eecec4e46944c05351d",
+                "reference": "c4d478bf70afa85577867eecec4e46944c05351d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "2.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net": "Net/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "Net/"
+            ],
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Amir Mohammad Saied",
+                    "email": "amirsaied@gmail.com",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Mirco Bauer",
+                    "email": "meebey@php.net",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Garrett Whitehorn",
+                    "email": "garrettw87@gmail.com",
+                    "role": "Lead"
+                }
+            ],
+            "description": "More info available on: http://pear.php.net/package/Net_SmartIRC",
+            "time": "2017-06-15T22:22:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
