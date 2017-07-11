@@ -1,0 +1,10 @@
+[
+  {
+    "message": "/^rest/",
+    "response": "You said rest."
+  },
+  {
+    "message": "/^test/",
+    "response": "You said test"
+  }
+]

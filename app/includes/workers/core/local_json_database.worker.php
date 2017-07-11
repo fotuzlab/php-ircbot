@@ -16,9 +16,9 @@ class Local_Json_Database
 		return json_decode(file_get_contents($filepath));
 	}
 
-	protected function getData($filename) {
+	protected function getData() {
 		// Get the file path.
-		$filepath = __DIR__ . '/../../../database/' . $filename . '.database.json';
+		$filepath = __DIR__ . '/../../../database/' . $this->filename . '.database.json';
 		return json_decode(file_get_contents($filepath));
 	}
 

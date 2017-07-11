@@ -1,8 +1,8 @@
 <?php
 
-include_once(__DIR__.'/../workers/database.worker.php');
+include_once(__DIR__.'/../../workers/database.worker.php');
 
-class Net_SmartIRC_module_Shabri
+class Net_SmartIRC_module_Base
 {
 
     private $irc;
@@ -38,7 +38,6 @@ class Net_SmartIRC_module_Shabri
     // }
 
     function test($irc, $data) {
-        print_r($data->message);print_r($data->message);
         $this->irc->message(SMARTIRC_TYPE_CHANNEL, $data->channel, $data->nick.': '. $this->database->getResponse($data->message));
     }
 
