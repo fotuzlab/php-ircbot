@@ -1,15 +1,17 @@
 <?php
 
-include_once(__DIR__.'/../includes/modules/shabri.module.php');
-include_once(__DIR__.'/../includes/workers/config.worker.php');
+define('BOT_NAME', basename(__FILE__, '.bot.php'));
+
+include_once(__DIR__.'/../modules/' . BOT_NAME . '.module.php');
+include_once(__DIR__.'/../../core/includes/workers/config.worker.php');
 
 $irc = new Net_SmartIRC(array(
     'DebugLevel' => SMARTIRC_DEBUG_ALL,
 ));
-$config = (new Config('shabri'))->config();
+$config = (new Config(BOT_NAME))->config();
 
-$irc->loadModule('Shabri')
-    ->connect('ssl://chat.freenode.net', 6697)
+$irc->loadModule(BOT_NAME)
+    ->connect($config->server, $config->port)
     ->login($config->nick, $config->name, 0)
     ->join(array($config->channel))
     ->listen()

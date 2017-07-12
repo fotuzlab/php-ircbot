@@ -1,8 +1,8 @@
 <?php
 
-include_once(__DIR__.'/core/base.module.php');
+include_once(__DIR__.'/../../core/includes/modules/base.module.php');
 
-class Net_SmartIRC_module_Shabri extends Net_SmartIRC_module_Base
+class Net_SmartIRC_module_shabri extends Net_SmartIRC_module_Base
 {
 
     private $irc;
@@ -10,7 +10,7 @@ class Net_SmartIRC_module_Shabri extends Net_SmartIRC_module_Base
 
     public function __construct($irc, $botname)
     {
-        $botname = 'shabri';
+        $botname = basename(__FILE__, '.module.php');
         parent::__construct($irc, $botname);
     }
 
