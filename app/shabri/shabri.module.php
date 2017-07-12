@@ -8,10 +8,10 @@ class Net_SmartIRC_module_shabri extends Net_SmartIRC_module_Base
     private $irc;
     protected $botname;
 
-    public function __construct($irc, $botname)
+    public function __construct($irc, $botname = NULL)
     {
-        $botname = basename(__FILE__, '.module.php');
-        parent::__construct($irc, $botname);
+        $this->botname = basename(__FILE__, '.module.php');
+        parent::__construct($irc);
     }
 
     public function __destruct()

@@ -21,7 +21,6 @@ class Database extends Local_Json_Database
 
 		foreach ($data as $key => $value) {
 			if (preg_match($value->message, $message) == 1) {
-				print_r($value);
 				return $value->response;
 			}
 		}

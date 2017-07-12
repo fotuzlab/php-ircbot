@@ -8,9 +8,9 @@ class Net_SmartIRC_module_Base
     private $irc;
     private $handlerids;
 
-    public function __construct($irc, $botname = NULL)
+    public function __construct($irc)
     {
-        $this->botname = $botname;
+        $this->botname;
         $this->irc = $irc;
         $this->handlerids = $this->createHandlerIds();
     }
