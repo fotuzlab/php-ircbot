@@ -8,19 +8,11 @@ class Net_SmartIRC_module_Base
     private $irc;
     private $handlerids;
 
-    public function __construct($irc)
+    public function __construct($irc, $botname = NULL)
     {
+        $this->botname = $botname;
         $this->irc = $irc;
-        $this->database = new Database('shabri');
-        $dataset = $this->database->data();
-        $this->handlerids = array();
-        foreach ($dataset as $key => $value) {
-            $this->value = $value;
-            $this->key = $key;
-            $this->handlerids[] = 
-            $irc->registerActionHandler(SMARTIRC_TYPE_CHANNEL, $this->value->message, array($this, 'test')
-            );
-        }
+        $this->handlerids = $this->createHandlerIds();
     }
 
     public function __destruct()
@@ -28,16 +20,26 @@ class Net_SmartIRC_module_Base
         $this->irc->unregisterActionId($this->handlerids);
     }
 
-    // protected function createHandlerIds() {
-    //     return $this->createHandlerIdsFromJsonDatabase();
-    // }
+    protected function createHandlerIds() {
+        return $this->createHandlerIdsFromJsonDatabase();
+    }
 
-    // private function createHandlerIdsFromJsonDatabase() {
+    protected function createHandlerIdsFromJsonDatabase() {
+        $this->database = new Database($this->botname);
+        $dataset = $this->database->data();
+        $array_of_handlerids = array();
+        
+        foreach ($dataset as $key => $value) {
+            $this->value = $value;
+            $this->key = $key;
+            $array_of_handlerids[] = 
+            $this->irc->registerActionHandler(SMARTIRC_TYPE_CHANNEL, $this->value->message, array($this, 'message')
+            );
+        }
+        return $array_of_handlerids;
+    }
 
-    //     return $array_of_handlerids;
-    // }
-
-    function test($irc, $data) {
+    public function message($irc, $data) {
         $this->irc->message(SMARTIRC_TYPE_CHANNEL, $data->channel, $data->nick.': '. $this->database->getResponse($data->message));
     }
 

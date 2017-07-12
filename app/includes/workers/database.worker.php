@@ -27,8 +27,5 @@ class Database extends Local_Json_Database
 			}
 		}
 
-		// $key = array_search($message, array_column($data, 'message'));
-		// print_r('$data->messagewa:');print_r($data[$key]);
-		// return $data[$key]->response;
 	}
 }
