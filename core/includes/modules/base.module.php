@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__.'/../workers/database.worker.php');
+include_once(INDEX_ROOT.'/vendor/autoload.php');
 
 class Net_SmartIRC_module_Base
 {

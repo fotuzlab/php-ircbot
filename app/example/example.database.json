@@ -1,0 +1,18 @@
+[
+  {
+    "message": "/^rest/",
+    "response": "You said rest."
+  },
+  {
+    "message": "/^test/",
+    "response": "You said test"
+  },
+  {
+    "message": "/who|destroyed|broke|name|person/",
+    "response": "Babar the invader"
+  },
+  {
+    "message": "/exist|there|was|is/",
+    "response": "Yes. Archeological survey has proved it."
+  }
+]

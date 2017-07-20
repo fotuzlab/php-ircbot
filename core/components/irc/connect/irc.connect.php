@@ -1,7 +1,9 @@
 <?php
 
-include_once(__DIR__.'/../../../../app/' . BOT_NAME . '/' . BOT_NAME . '.module.php');
-include_once(__DIR__.'/../../../includes/workers/config.worker.php');
+include_once(INDEX_ROOT.'/vendor/autoload.php');
+
+chdir("vendor/pear/net_smartirc");
+include_once('Net/SmartIRC.php');
 
 class Connect_Bot
 {

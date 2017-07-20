@@ -1,5 +1,14 @@
 <?php
 
-include_once(__DIR__.'/vendor/autoload.php');
-include_once('SmartIRC.php');
-include_once('app/shabri/shabri.bot.php');
+define('INDEX_ROOT', __DIR__);
+
+// Autoload bots.
+$bots = glob(INDEX_ROOT . '/app/*' , GLOB_ONLYDIR);
+
+// Manually load bots.
+// $bots = array();
+
+foreach ($bots as $bot) {
+	$bot = basename($bot);
+	include_once('app/' . $bot . '/' . $bot . '.bot.php');
+}

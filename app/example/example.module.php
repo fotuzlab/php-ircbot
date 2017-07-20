@@ -2,7 +2,7 @@
 
 include_once(INDEX_ROOT.'/vendor/autoload.php');
 
-class Net_SmartIRC_module_shabri extends Net_SmartIRC_module_Base
+class Net_SmartIRC_module_example extends Net_SmartIRC_module_Base
 {
     public $name = '';
     public $author = '';
