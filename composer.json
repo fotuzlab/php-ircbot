@@ -1,9 +1,8 @@
 {
     "require": {
-        "pear/net_smartirc": "1.1.11",
-        "ext-pthreads": ">=2.0.0"
+        "pear/net_smartirc": "1.1.11"
     },
     "autoload": {
-        "classmap": ["app/", "core/"]
+        "classmap": ["bots/", "core/"]
     }   
 }
