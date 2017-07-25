@@ -13,7 +13,7 @@
  * e.g. If your botname is "robo", class name should be Net_SmartIRC_module_robo.
  * Note names are case-sensitive.
  */
-class Net_SmartIRC_module_example extends Net_SmartIRC_module_Base
+class Net_SmartIRC_module_example extends Module_Base
 {
     public $name = '';
     public $author = '';

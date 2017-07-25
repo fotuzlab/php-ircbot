@@ -8,7 +8,7 @@
 /**
  * Base class to create message handlers for the bot.
  */
-class Net_SmartIRC_module_Base
+class Module_Base
 {
 
     private $irc;

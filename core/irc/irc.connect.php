@@ -14,7 +14,7 @@ include_once('Net/SmartIRC.php');
 /**
  * Load chat module and connect the bot to IRC channel.
  */
-class Connect_Bot
+class IRC_Connect
 {
 	/**
 	 * Constructor.

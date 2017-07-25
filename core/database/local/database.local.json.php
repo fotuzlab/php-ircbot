@@ -10,7 +10,7 @@
 /**
  * Connect and retrieve data from local JSON database.
  */
-class Local_Json_Database
+class Database_Local_Json
 {
 
 	/**

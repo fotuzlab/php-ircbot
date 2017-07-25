@@ -8,7 +8,7 @@
 /**
  * Get bot configuration from local json database.
  */
-class Config extends Local_Json_Database
+class Config extends Database_Local_Json
 {
 	/**
 	 * Constructor.

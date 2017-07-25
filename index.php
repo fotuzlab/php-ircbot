@@ -35,9 +35,10 @@ define('BOT_NAME', $botname);
 include_once(INDEX_ROOT.'/vendor/autoload.php');
 include_once(INDEX_ROOT.'/core/irc/irc.connect.php');
 
+// Connect to IRC.
 try
 {
-	new Connect_Bot(BOT_NAME);
+	new IRC_Connect(BOT_NAME);
 }
 catch (Exception $e)
 {

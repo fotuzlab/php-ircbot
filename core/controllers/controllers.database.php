@@ -8,7 +8,7 @@
 /**
  * Get bot message/reposnse mapping from local json database.
  */
-class Database extends Local_Json_Database
+class Database extends Database_Local_Json
 {
 	/**
 	 * Constructor.
