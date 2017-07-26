@@ -25,7 +25,7 @@ class Net_SmartIRC_module_shabri extends Module_Base
      */
     public function __construct($irc)
     {
-        $this->botname = basename(__FILE__, '.module.php');
+        $this->botname = basename(__DIR__);
         parent::__construct($irc);
     }
 
