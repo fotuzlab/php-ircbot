@@ -33,7 +33,7 @@ define('BOT_NAME', $botname);
 
 // Include files.
 include_once(INDEX_ROOT.'/vendor/autoload.php');
-include_once(INDEX_ROOT.'/core/irc/irc.connect.php');
+include_once(INDEX_ROOT.'/src/irc/irc.connect.php');
 
 // Connect to IRC.
 try
