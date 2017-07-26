@@ -8,7 +8,7 @@
 /**
  * Get bot configuration from local json database.
  */
-class Config extends Database_Local_Json
+class Controller_Config extends Database_Local_Json
 {
 	/**
 	 * Constructor.
@@ -40,7 +40,7 @@ class Config extends Database_Local_Json
 	 * )
 	 * must retain current config model
 	 * @return
-	 *  (array) Bot configuration from json file.
+	 *  (object) Bot configuration from json file.
 	 */
 	public function config() {
 		try

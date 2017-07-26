@@ -8,7 +8,7 @@
 /**
  * Get bot message/reposnse mapping from local json database.
  */
-class Database extends Database_Local_Json
+class Controller_Database extends Database_Local_Json
 {
 	/**
 	 * Constructor.
@@ -47,7 +47,7 @@ class Database extends Database_Local_Json
 	 * @see
 	 *  Net_SmartIRC_module_Base::createHandlerIds()
 	 * @return
-	 *  (array) Data from local json file.
+	 *  (object) Data from local json file.
 	 */
 	public function data() {
 		try

@@ -30,7 +30,7 @@ class IRC_Connect
 		    'DebugLevel' => SMARTIRC_DEBUG_ALL,
 		));
 		// Load config.
-		$config = (new Config($botname))->config();
+		$config = (new Controller_Config($botname))->config();
 
 		// Load module.
 		$irc->loadModule($botname)

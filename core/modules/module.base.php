@@ -64,7 +64,7 @@ class Module_Base
      */
     protected function createHandlerIdsFromJsonDatabase() {
         // Create database object.
-        $this->database = new Database($this->botname);
+        $this->database = new Controller_Database($this->botname);
         // Get data.
         $dataset = $this->database->data();
         $array_of_handlerids = array();
