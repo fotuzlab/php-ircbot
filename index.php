@@ -33,12 +33,12 @@ define('BOT_NAME', $botname);
 
 // Include files.
 include_once(INDEX_ROOT.'/vendor/autoload.php');
-include_once(INDEX_ROOT.'/src/irc/irc.connect.php');
+include_once(INDEX_ROOT.'/src/irc/connect/irc.connect.net_smartirc.php');
 
 // Connect to IRC.
 try
 {
-	new IRC_Connect(BOT_NAME);
+	new IRC_Connect_Net_SmartIRC(BOT_NAME);
 }
 catch (Exception $e)
 {

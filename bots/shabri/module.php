@@ -9,7 +9,7 @@
 /**
  * Create a bot module to be used by Net_SmartIRC library.
  */
-class Net_SmartIRC_module_shabri extends Module_Base
+class Net_SmartIRC_module_shabri extends Module_Net_SmartIRC
 {
     public $name = '';
     public $author = '';

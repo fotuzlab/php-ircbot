@@ -6,7 +6,7 @@
  */
 
 // Define INDEX_ROOT.
-define('INDEX_ROOT', __DIR__ . '/../..');
+define('INDEX_ROOT', __DIR__ . '/../../..');
 // Autoload files.
 include_once(INDEX_ROOT . '/vendor/autoload.php');
 
