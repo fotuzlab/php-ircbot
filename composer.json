@@ -1,0 +1,11 @@
+{
+    "require": {
+        "pear/net_smartirc": "1.1.11"
+    },
+    "autoload": {
+        "classmap": ["bots/", "src/"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "server": "ssl://chat.freenode.net",
+  "port": "6697",
+  "nick": "shabri",
+  "name": "shabri",
+  "channel": "#ram-mandir"
+}
