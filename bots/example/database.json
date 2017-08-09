@@ -1,18 +1,18 @@
 [
   {
-    "message": "/^rest/",
-    "response": "You said rest."
+    "message": "/what|your name/",
+    "response": "My name is example_bot."
   },
   {
-    "message": "/^test/",
-    "response": "You said test"
+    "message": "/^who are you/",
+    "response": "I am a bot. An example of PHP-IRCBOT framework."
   },
   {
-    "message": "/who|destroyed|broke|name|person/",
-    "response": "Babar the invader"
+    "message": "/where|your|code|find|can/",
+    "response": "Fork or download me at https://github.com/fotuzlab/php-ircbot"
   },
   {
-    "message": "/exist|there|was|is/",
-    "response": "Yes. Archeological survey has proved it."
+    "message": "/thank/",
+    "response": "You're welcome."
   }
 ]

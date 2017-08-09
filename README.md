@@ -23,8 +23,10 @@ Installation
 -------------
 #### Requirements
 
-- [Composer](https://getcomposer.org/) (Required)
-- [Vagrant](https://www.vagrantup.com/) (Optional)
+- [Vagrant](https://www.vagrantup.com/)
+- [Composer](https://getcomposer.org/) (Required if you don't wish to install vagrant)
+
+Installing composer can be skipped if vagrant is installed. Vagrant will instal composer automatically in the VM.
 
 #### 3 Step installation
 
@@ -92,3 +94,4 @@ Logging
 
 Code Documentation
 -------------
+[Doxygen documentation](https://fotuzlab.github.io/php-ircbot/html/)
