@@ -1,7 +1,7 @@
 {
   "server": "ssl://chat.freenode.net",
   "port": "6697",
-  "nick": "example",
-  "name": "example",
-  "channel": "#ram-mandir"
+  "nick": "example_bot",
+  "name": "example_bot",
+  "channel": "#php-ircbot"
 }
