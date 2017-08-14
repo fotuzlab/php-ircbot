@@ -33,6 +33,7 @@ define('BOT_NAME', $botname);
 
 // Include files.
 include_once(INDEX_ROOT.'/vendor/autoload.php');
+// Workaround until psr-4 is implemented.
 include_once(INDEX_ROOT.'/src/irc/connect/irc.connect.net_smartirc.php');
 
 // Connect to IRC.

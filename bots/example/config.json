@@ -3,5 +3,5 @@
   "port": "6697",
   "nick": "example_bot",
   "name": "example_bot",
-  "channel": "#php-ircbot-lab"
+  "channel": "#php-ircbot"
 }

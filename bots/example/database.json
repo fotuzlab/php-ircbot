@@ -1,14 +1,14 @@
 [
   {
     "message": "/what|your name/",
-    "response": "My name is example_bot."
+    "response": "I am known as example_bot."
   },
   {
     "message": "/^who are you/",
     "response": "I am a bot. An example of PHP-IRCBOT framework."
   },
   {
-    "message": "/where|your|code|find|can/",
+    "message": "/where|code|find|can/",
     "response": "Fork or download me at https://github.com/fotuzlab/php-ircbot"
   },
   {
