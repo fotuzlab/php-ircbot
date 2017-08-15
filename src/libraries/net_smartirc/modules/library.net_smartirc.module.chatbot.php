@@ -1,56 +1,39 @@
 <?php
 
 /**
- * @file
- *  Include or extend.
+ * This module implements chatbot functionality using API provided
+ * by Net_SmartIRC library.
+ * More modules can be created on the same lines.
  */
-
-/**
- * Base class to create message handlers for the bot.
- */
-class Module_Net_SmartIRC
+class Library_Net_Smartirc_Module_Chatbot
 {
+    public $name        = '';
+    public $description = '';
+    public $author      = '';
+    public $license     = '';
 
     private $irc;
     private $handlerids;
-
+    private $botname;
+    
     /**
      * Constructor.
-     * Create IRC handlers required by NET_SmartIRC library.
-     * @param
-     *  $irc: IRC object.
+     * Register handlerids.
      */
-    public function __construct($irc)
+    public function __construct($irc, $botname)
     {
-        $this->botname;
         $this->irc = $irc;
+        $this->botname = $botname;
         $this->handlerids = $this->createHandlerIds();
     }
 
     /**
-     * Destructor.
+     * Destuctor.
      * Unregister handlerids.
      */
     public function __destruct()
     {
         $this->irc->unregisterActionId($this->handlerids);
-    }
-
-    /**
-     * Create handlerids.
-     * Override this method to modify handlerids.
-     * In most cases this method should work. However, if you have modified the
-     * source of the database and its format, you may need to override this 
-     * method to make corresponding changes.
-     * @see
-     *  Net_SmartIRC_module_Base::createHandlerIdsFromJsonDatabase()
-     * @see
-     *  Config::config()
-     * @see
-     *  Database::data()
-     */
-    protected function createHandlerIds() {
-        return $this->createHandlerIdsFromJsonDatabase();
     }
 
     /**
@@ -62,15 +45,14 @@ class Module_Net_SmartIRC
      * @return
      *  (array) Id of handlerids.
      */
-    protected function createHandlerIdsFromJsonDatabase() {
-        // Create database object.
-        $this->database = new Controller_Default_Database($this->botname);
+    private function createHandlerIds() {
         // Get data.
-        $dataset = $this->database->data();
+        $this->dataset = (new Controller_Database())->get($this->botname);
+
         $array_of_handlerids = array();
         
         // Iterate over data.
-        foreach ($dataset as $key => $value) {
+        foreach ($this->dataset as $key => $value) {
             $this->value = $value;
             $this->key = $key;
             // Register multiple action handlers.
@@ -87,7 +69,23 @@ class Module_Net_SmartIRC
      * <responding to>: Response
      */
     public function message($irc, $data) {
-        $this->irc->message(SMARTIRC_TYPE_CHANNEL, $data->channel, $data->nick.': '. $this->database->getResponse($data->message));
+        $this->irc->message(SMARTIRC_TYPE_CHANNEL, $data->channel, $data->nick . ': '. $this->getResponse($data->message));
     }
 
+    /**
+     * Map message and response.
+     * @param
+     *  (array) Message.
+     * @return
+     *  (array) Response.
+     */
+    private function getResponse($message) {
+
+        foreach ($this->dataset as $key => $value) {
+            if (preg_match($value->message, $message) == 1) {
+                return $value->response;
+            }
+        }
+
+    }
 }
